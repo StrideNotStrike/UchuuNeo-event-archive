@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雨中 Neo 总督禁言事件 · 完整档案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/characters.css">
+<link rel="stylesheet" href="css/timeline.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- utils -->
+<div id="progress"></div>
+<div id="flash"></div>
+<div id="bgc-wrap"><canvas id="bgc"></canvas></div>
+<div class="noise"></div>
+
+<!-- loader -->
+<div id="loader">
+  <div id="loader-lbl">LOADING CASE FILE</div>
+  <div id="loader-track"><div id="loader-fill"></div></div>
+  <div id="loader-pct">0%</div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav class="nav">
+  <div class="nav__logo"><span>[</span>雨中 Neo 总督禁言事件<span>]</span></div>
+  <ul class="nav__links">
+    <li><a href="#chars">当事人</a></li>
+    <li><a href="#bg">背景</a></li>
+    <li><a href="#tl">时间线</a></li>
+    <li><a href="#quotes">原话</a></li>
+    <li><a href="#legal">法律</a></li>
+    <li><a href="#ed">补充</a></li>
+    <li><a href="#aft">后续</a></li>
+  </ul>
+  <div class="nav__right">
+    <div class="nav__status">
+      <span class="nav__dot"></span>
+      <span>LIVE ARCHIVE</span>
+    </div>
+    <div class="font-size-switcher" id="font-switcher" role="group" aria-label="字号切换">
+      <button class="fs-btn" data-size="small" aria-label="小字号">小</button>
+      <button class="fs-btn" data-size="medium" aria-label="中字号">中</button>
+      <button class="fs-btn" data-size="large" aria-label="大字号">大</button>
+    </div>
+    <button class="toggle" id="theme-btn" aria-label="切换亮暗">
+      <div class="toggle__thumb">
+        <span class="toggle__moon">🌙</span>
+        <span class="toggle__sun">☀️</span>
+      </div>
+    </button>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="top">
+  <div class="hero__grid"></div>
+  <div class="hero__bar"></div>
+
+  <div class="hero__eye ru" data-d="0">
+    <span class="hero__eye-line"></span>
+    <span class="hero__eye-text">CASE FILE · 2026.04.08 · BILIBILI</span>
+  </div>
+
+  <div class="hero__badges ru" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px" data-d="0">
+    <!--<span style="padding:4px 10px;background:var(--c-red-a);border:1px solid var(--c-red);color:var(--c-red);font-family:var(--f-mono);font-size:calc(11px * var(--fs-mul));letter-spacing:.05em">● 民事诉讼已提起</span>-->
+    <!--<span style="padding:4px 10px;background:rgba(255,180,0,.08);border:1px solid rgba(255,180,0,.4);color:rgba(255,180,0,.9);font-family:var(--f-mono);font-size:calc(11px * var(--fs-mul));letter-spacing:.05em">⚖ 等待法律程序推进</span>-->
+    <span style="padding:4px 10px;background:var(--c-red-a);border:1px solid var(--c-red);color:var(--c-red);font-family:var(--f-mono);font-size:calc(11px * var(--fs-mul));letter-spacing:.05em">⚖ 等待法律程序推进</span>
+    <span style="padding:4px 10px;background:rgba(255,255,255,.05);border:1px solid var(--c-line);color:var(--c-dim);font-family:var(--f-mono);font-size:calc(11px * var(--fs-mul));letter-spacing:.05em">↻ 持续更新</span>
+    <span style="padding:4px 10px;background:rgba(255,255,255,.05);border:1px solid var(--c-line);color:var(--c-dim);font-family:var(--f-mono);font-size:calc(11px * var(--fs-mul));letter-spacing:.05em">最后编辑：2026 年 4 月 23 日</span>
+  </div>
+
+  <div class="hero__title-block">
+    <span class="hero__name ru" data-d="1"><span class="glitch" data-t="雨中Neo">雨中 Neo</span></span>
+    <span class="hero__event ru" data-d="2">舰群禁言开盒总督事件</span>
+    <span class="hero__sub ru" data-d="3">雨中 Neo 舰群禁言开盒总督事件 · 完整档案</span>
+  </div>
+
+  <p class="hero__desc ru" data-d="4">
+    一场因群管理带头引发的冲突事件。近 <strong>20000 元</strong>的总督打赏，因 <strong>1 分钟</strong>内被群管理禁言，付诸东流。
+  </p>
+
+  <div class="hero__stats ru" data-d="5">
+    <div class="stat"><span class="stat__n stat__n--red">2026年4月8日</span><span class="stat__l">事件爆发时间</span></div>
+    <div class="stat"><span class="stat__n" data-count="1" data-suffix=" 分钟">1 分钟</span><span class="stat__l">被群管理禁言</span></div>
+    <div class="stat"><span class="stat__n">87.4 万</span><span class="stat__l">相关视频播放量</span></div>
+    <div class="stat"><span class="stat__n stat__n--red">删除相关内容视频</span><span class="stat__l">B站最终处理</span></div>
+  </div>
+
+  <div class="hero__banner ru" data-d="6">
+    <div class="bn"><span class="bn__n">43 级</span><span class="bn__l">受害者粉丝牌</span></div>
+    <div class="bn"><span class="bn__n">19998 元</span><span class="bn__l">受害者打赏金额</span></div>
+  </div>
+
+  <div class="hero__tape">
+    <span class="hero__tape-label">UCHUU_Neo.docx · LIVE ARCHIVE · 2026</span>
+    <span class="hero__tape-dot"></span>
+  </div>
+</section>
+
+<!-- ══ 01 CHARACTERS ══ -->
+<section class="s s--dark" id="chars">
+  <div class="s__header ru">
+    <span class="s__num">01</span>
+    <span class="s__label">当事人</span>
+    <span class="s__rule"></span>
+  </div>
+  <h2 class="s__title ru">这场事件的两个<br>核心人物</h2>
+
+  <div class="char-wrap">
+
+    <div class="char char--villain rl">
+      <div class="char__glow"></div>
+      <span class="badge badge--red" style="margin-bottom:18px">涉事方</span>
+      <div class="char__av villain-avatar">
+        <div class="char__av-ring"></div>
+        <img src="1.jpg" alt="雨中 Neo"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span class="char__av-icon" style="display:none">!</span>
+      </div>
+      <h3 class="char__name">雨中 Neo</h3>
+      <div class="char__handle"><a href="https://space.bilibili.com/9404404" target="_blank" style="color:inherit;text-decoration:none">B站 @雨中Neo ↗</a></div>
+      <div class="char__divider"></div>
+      <ul class="char__data">
+        <li><span class="ck">粉丝量（事前）</span><span class="cv cv--r">约 33.3 万</span></li>
+        <li><span class="ck">粉丝量（最低）</span><span class="cv cv--r">约 31.1 万（-2.1 万）</span></li>
+        <li><span class="ck">粉丝量（当前）</span><span class="cv cv--r">约 31.1 万（-2.1 万）</span></li>
+        <li><span class="ck">B 站账号状态</span><span class="cv cv--r"><strong>相关内容被平台删除</strong></span></li>
+        <li><span class="ck">历史前科</span><span class="cv cv--r">前身为「五月病」（一说「五月七日病」）</span></li>
+      </ul>
+      <div class="char__verdict">主要责任方 · 涉嫌不当站队群管理、放纵管理恶意网暴粉丝</div>
+    </div>
+
+    <div class="char__vs ru">
+      <span>VS</span>
+      <div class="char__vs-sparks">
+        <div class="sp"></div><div class="sp"></div>
+        <div class="sp"></div><div class="sp"></div>
+      </div>
+    </div>
+
+    <div class="char char--victim rr">
+      <div class="char__glow"></div>
+      <span class="badge badge--amber" style="margin-bottom:18px">受害方</span>
+      <div class="char__av victim-avatar">
+        <div class="char__av-ring"></div>
+        <img src="2.jpg" alt="芝士电子狗"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span class="char__av-icon" style="display:none">◎</span>
+      </div>
+      <h3 class="char__name">芝士电子狗</h3>
+      <div class="char__handle"><a href="https://space.bilibili.com/518811966" target="_blank" style="color:inherit;text-decoration:none">B站 @芝士电子狗 ↗</a></div>
+      <div class="char__divider"></div>
+      <ul class="char__data">
+        <li><span class="ck">粉丝牌等级</span><span class="cv cv--a">43 级（长期核心老粉）</span></li>
+        <li><span class="ck">舰长状态</span><span class="cv cv--a">总督</span></li>
+        <li><span class="ck">当前粉丝数</span><span class="cv cv--a">1.2 万</span></li>
+        <li><span class="ck">当前立场</span><span class="cv cv--a">等待法律程序推进</span></li>
+      </ul>
+      <div class="char__verdict">次要责任方 · 等待法院程序推进</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 02 BACKGROUND ══ -->
+<section class="s s--mid" id="bg">
+  <div class="s__header ru">
+    <span class="s__num">02</span>
+    <span class="s__label">背景机制</span>
+    <span class="s__rule"></span>
+  </div>
+  <h2 class="s__title ru">你需要先了解的事</h2>
+
+  <div class="bg-layout">
+    <div class="ru">
+      <p style="font-size:calc(14px * var(--fs-mul));color:var(--c-dim);line-height:1.9;margin-bottom:18px">
+        在 B 站直播生态中，「大航海」是一种付费订阅打赏，表达对主播的认可，根据价位不同从低到高可分为「舰长」「提督」「总督」。其中，<strong style="color:var(--c-red)">「总督」</strong>的等级和金额最高（约每月 2 万元）。
+      <p style="font-size:calc(14px * var(--fs-mul));color:var(--c-dim);line-height:1.9">
+        打赏本身存在一定风险——<strong>打赏的前提是基于粉丝对主播的认可和信任</strong>。这一次，一位 43 级总督长达多年的信任在冲突之下荡然无存。
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 03 TIMELINE ══ -->
+<section class="s s--dark" id="tl">
+  <div class="s__header ru">
+    <span class="s__num">03</span>
+    <span class="s__label">事件时间线</span>
+    <span class="s__rule"></span>
+  </div>
+  <h2 class="s__title ru">从信任到毁灭<br>完整还原</h2>
+
+  <div class="tl">
+    <div class="tl__track"></div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月4日 下午</div>
+        <h3 class="tl__h">暴风前的宁静</h3>
+        <p class="tl__body">本次事件主人公<em>芝士电子狗</em>，在主播雨中 Neo 直播间发了价值近 2 万电池的 SC（Super chat，醒目留言），并在其直播间总督登船。</p>
+        <span class="tl__tag tag--bg">背景</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月8日 中午</div>
+        <h3 class="tl__h">致命约谈</h3>
+        <p class="tl__body">芝士电子狗在雨中 Neo 的舰长群内约谈线下活动，给出了自己的活动时间和地点（上海）。</p>
+        <p class="tl__body" style="margin-top:10px">芝士电子狗＠其接话，回复道<em>「来给我 CCB」</em>（网络梗，无明显恶意倾向）。此发言引起两位管理的不满，<em>不思議な種</em>说明其性别为女生，发言注意礼貌。</p>
+        <span class="tl__tag tag--key">导火索</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月8日 中午12:35</div>
+        <h3 class="tl__h">只许州官放火，不许百姓点灯</h3>
+        <p class="tl__body">芝士电子狗得知后表示<em>「没兴趣」</em>试图结束话题，然而<em>不思議な種</em>并不接受，以其<strong>冒犯女生</strong>为由，要求其对 Bronyaicu 进行道歉。</p>
+        <p class="tl__body" style="margin-top:10px">等待<strong>一分钟</strong>后，<em>Bronyaicu</em> 见芝士电子狗未回应，将其<strong>禁言一小时</strong>。</p>
+        <p class="tl__body" style="margin-top:10px">（当时芝士电子狗正在制作 Neo 的留言视频，并<strong>未及时注意到消息</strong>。）</p>
+        <span class="tl__tag tag--ev">关键事件</span>
+      </div>
+    </div>
+
+    <div class="tl__item tl__item--hot ru">
+      <div class="tl__node tl__node--hot"></div>
+      <div class="tl__content">
+        <div class="tl__time tl__time--red">2026年4月8日 中午13:00</div>
+        <h3 class="tl__h">主播出现，站队群管</h3>
+        <p class="tl__body">下午一点左右，主播 <strong>雨中 Neo</strong>（群 ID 看板娘）出现在群中，并表示<em>和管理讨论后会处理此事件</em>。在尚未完全了解的情况下，将当事人的发言定性为<em>「本身就是不当发言，而且没有给女生道歉大家都反感」</em>。</p>
+        <p class="tl__body" style="margin-top:10px">以上种种发言，引起了芝士电子狗的不满，并联系雨中 Neo 表示要与其协商，要求道歉。</p>
+        <span class="tl__tag tag--hot" style="margin-top:8px">核心事件</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月8日 下午</div>
+        <h3 class="tl__h">管理开盒并攻击受害方</h3>
+        <p class="tl__body"><em>Bronyaicu</em> 未经同意，在网络<strong>公开总督 QQ 号、B 站 UID 等</strong>可识别身份的私密信息。</p>
+        <p class="tl__body" style="margin-top:10px">与此同时，<em>不思議な種</em>在芝士电子狗动态下方发表挑衅式发言。</p>
+        <span class="tl__tag tag--key">舆论引爆</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月8日 晚上</div>
+        <h3 class="tl__h">联系未果，联系上级</h3>
+        <p class="tl__body">芝士电子狗尝试联系雨中 Neo，但对方一直未回其消息。于是芝士电子狗联系雨中 Neo 的 Staff，要求其让主播本人录制道歉视频。</p>
+        <span class="tl__tag tag--ev">舆论引爆</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月8日</div>
+        <h3 class="tl__h">芝士电子狗注册公司</h3>
+        <p class="tl__body">芝士电子狗于当日注册上海芝士昱森科技有限公司</p>
+        <span class="tl__tag tag--hot">注册公司</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月9日 晚19:24</div>
+        <h3 class="tl__h">芝士电子狗发布视频，引爆全网</h3>
+        <p class="tl__body">受害者投稿<strong color="var(--c-red)"><em>《[v 圈清雨中 neo] 管理是清雨？敢对总督这样？一分钟不道歉就禁言的神人舰长群！​》</em></strong>（现已下架），表达不满。</p>
+        <span class="tl__tag tag--hot">舆论升级</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月9日 晚21:00</div>
+        <h3 class="tl__h">雨中敷衍态度把怒火烧到最高点</h3>
+        <p class="tl__body">雨中 Neo 发布了道歉视频，全程<strong>极为敷衍</strong>，文案疑似使用 AI 生成，且道歉<strong>面向「群内的舰长和观众们」</strong>，完全没有提到向 Staff 提出道歉要求的总督本人——芝士电子狗。</p>
+        <span class="tl__tag tag--ev">主播方回应</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月9日</div>
+        <h3 class="tl__h">芝士电子狗：拒不接受道歉，直播声讨</h3>
+        <p class="tl__body">芝士电子狗发动态表示<strong>并不接受</strong>，并开启直播声讨。</p>
+        <span class="tl__tag tag--law">受害方回应</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月9日 深夜（10日凌晨）</div>
+        <h3 class="tl__h">受害者遭开盒</h3>
+        <p class="tl__body"><strong>凌晨</strong>，正在直播中的芝士电子狗被开盒，短时间内收到<strong>大量骚扰短信和电话</strong>。</p>
+        <p class="tl__body" style="margin-top:10px">此前，禁言芝士电子狗的管理 Bronyaicu 在动态<strong>挂起芝士电子狗的 QQ 号等信息</strong>，不思議な種也在直播时<strong>多次攻击</strong>芝士电子狗。</p>
+        <span class="tl__tag tag--ev">受害方动态</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月10日凌晨</div>
+        <h3 class="tl__h">与主播老板进行交涉</h3>
+        <p class="tl__body">芝士电子狗在直播中与主播的老板进行交涉，对自己被开盒网暴一事要求其负责。</p>
+        <p class="tl__body" style="margin-top:10px">一段时间后，老板没有回应，芝士电子狗决定采用法律手段，并以自己公司的名义撰写<strong>告知函</strong>。</p>
+        <p class="tl__body" style="margin-top:10px">从凌晨到上午，该老板表示主播本人一直无法联系。</p>
+        <span class="tl__tag tag--law">受害方回应</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月10日</div>
+        <h3 class="tl__h">三角洲经济学教父谈论此事件</h3>
+        <p class="tl__body">三角洲经济学教父发表<em>《总督被污蔑 X 骚扰被开被短信轰炸之后开公司反击！新清雨事件后续！》</em>视频，谈论此事件，标志着此事件的跨圈扩散。</p>
+        <span class="tl__tag tag--hot">跨圈扩散</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月11日</div>
+        <h3 class="tl__h">女管理身份被曝造假</h3>
+        <p class="tl__body">部分网友扒出之前 <em>Bronyaicu</em> 的多条言论，其女性性别身份疑似造假。</p>
+        <p class="tl__body" style="margin-top:10px">例如：<em>「一个男性，帮着女性说话？」</em>等。</p>
+        <span class="tl__tag tag--ev">真实身份存疑</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月11日 中午</div>
+        <h3 class="tl__h">受害方家人被开盒</h3>
+        <p class="tl__body">芝士电子狗发文称自己<strong>父母被开盒、短信轰炸</strong>，逾越了「祸不及家人」原则，其父亲决定通过法律维权，并称<em>要报警抓开盒团伙</em>。</p>
+        <span class="tl__tag tag--law">受害方回应</span>
+      </div>
+    </div>
+
+    <div class="tl__item tl__item--hot ru">
+      <div class="tl__node tl__node--ban"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月11日</div>
+        <h3 class="tl__h">第三方介入，大量相关视频被删除</h3>
+        <p class="tl__body">雨中 Neo 所属公会老板 <em>@Hooxi_Official</em> 开始下场，清理下架所有关于此事件流量较高的视频，并在当晚直播中直言站队雨中 Neo。</p>
+        <span class="tl__tag tag--ban">第三方介入</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月12日</div>
+        <h3 class="tl__h">受害方采取一系列证据层面措施</h3>
+        <p class="tl__body">为留存相应证据，芝士电子狗决定将视频、公告函等内容上传云文档。</p>
+        <span class="tl__tag tag--law">采取措施</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月12日</div>
+        <h3 class="tl__h">三角洲经济学教父视频遭下架</h3>
+        <p class="tl__body">此前发表的视频遭删除，三角洲经济学教父将其解释为 B 站的保护性下架，并告知观众事件<strong>复杂度远超预期</strong>，不要随意站队。</p>
+        <span class="tl__tag tag--ev">扩圈起源消失</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月12日至14日</div>
+        <h3 class="tl__h">众多网友加入吃瓜狂潮</h3>
+        <p class="tl__body">众多网友加入吃瓜狂潮，内容表现形式多样，表达对此事件的态度，但多数视频存活不久后下架。</p>
+        <span class="tl__tag tag--law">外界群众参与讨论</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node tl__node--ban"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月14日 晚20:00左右</div>
+        <h3 class="tl__h">B 站删除双方关于此事件的内容</h3>
+        <p class="tl__body">双方关于此事件的内容<strong>均被下架</strong>，包括受害方的曝光视频及其后续，当事人的道歉视频，平台层面对其处理进一步升级。</p>
+        <span class="tl__tag tag--ban">平台处理</span>
+      </div>
+    </div>
+
+    <div class="tl__item ru">
+      <div class="tl__node tl__node--ban"></div>
+      <div class="tl__content">
+        <div class="tl__time">2026年4月15日</div>
+        <h3 class="tl__h">受害方回应视频下架</h3>
+        <p class="tl__body">芝士电子狗发现视频下架与留存内容规律，推测可能与 <em>@Hooxi_Official</em> 相关，并提出质疑 B 站对此事件内容下架标准，导致公众对事件真相的判断不明。</p>
+        <span class="tl__tag tag--law">受害方更新</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 04 QUOTES ══ -->
+<section class="s s--mid" id="quotes">
+  <div class="s__header ru">
+    <span class="s__num">04</span>
+    <span class="s__label">原话实录</span>
+    <span class="s__rule"></span>
+  </div>
+  <h2 class="s__title ru">雨中 Neo 舰群管理<br>亲口说出的话</h2>
+  <p class="s__sub ru">以下为管理相关言论记录。前三条均有含具体时间戳的聊天截图佐证，中间部分均有含具体时间戳的社交平台评论截图佐证；后一条来源存疑，标注待核实。</p>
+
+  <div class="q-grid ru">
+    <div class="q q--lg">
+      <span class="q__mark">1</span>
+      <div class="q__text"><strong>嘛</strong>，提醒芝士一句，群里女孩子不少。</div>
+      <div class="q__ctx">要求受害方道歉的发言</div>
+    </div>
+    <div class="q">
+      <span class="q__mark">2</span>
+      <div class="q__text" font-size calc(20px * var(--fs-mul))><strong>嘛</strong>，只给了他一分钟的时间道歉，或者两分钟。</div>
+      <div class="q__ctx">一分钟后禁言行为的事后诡辩</div>
+    </div>
+    <div class="q">
+      <span class="q__mark">3</span>
+      <div class="q__text">正义制裁，默哀一秒钟，狂笑一小时。</div>
+      <div class="q__ctx">受害方被禁言时管理的反应</div>
+    </div>
+    <div class="q">
+      <span class="q__mark">4</span>
+      <div class="q__text">看看，开黄腔是我说的，雨中 Neo 最后可是定性的骚扰。</div>
+      <div class="q__ctx">不思議な種在 B 站的公开发言（现已删除）</div>
+    </div>
+    <div class="q">
+      <span class="q__mark">5</span>
+      <div class="q__text">吃饭呢，因为我是管理啊。</div>
+      <div class="q__ctx">面对质问「你说上门服务的时候为啥没被禁言」的回复</div>
+    </div>
+    <div class="q">
+      <span class="q__mark">6</span>
+      <div class="q__text">嘛，这种老头，至少雨中 Neo 受不起。</div>
+      <div class="q__ctx">在受害方<em>芝士电子狗</em>动态下的评论</div>
+    </div>
+    <div class="q">
+      <span class="q__mark">7</span>
+      <div class="q__text">卧槽，昨晚上就想这么玩了，可惜被勒令不许发表暴论了，现在爽了。</div>
+      <div class="q__ctx">在受害方告知函下方的评论</div>
+    </div>
+
+    <div class="q q--lg q--unverified">
+      <span class="q__mark">8</span>
+      <div class="q__text">就个人而言，我是无法接受芝士的串子性格。</div>
+      <div class="q__ctx">不思議な種先前在 QQ 群内的看法（来源待核实）</div>
+      <div class="q__warn">
+        <span class="q__warn-icon">⚠</span>
+        <span class="q__warn-text">此言论目前仅见于部分第三方发布的内容，无明显时间戳，引用前请自行核实原始来源。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 05 EVIDENCE ══ -->
+<section class="s s--dark" id="ev">
+  <div class="s__header ru">
+    <span class="s__num">05</span>
+    <span class="s__label">关键证据</span>
+    <span class="s__rule"></span>
+  </div>
+  <h2 class="s__title ru">此案的核心事实</h2>
+
+  <div class="ev-grid ru">
+    <div class="ev">
+      <div class="ev__num">EV-001</div>
+      <span class="ev__icon">◷</span>
+      <h3 class="ev__h">矛盾转移</h3>
+      <p class="ev__body">管理带头开黄腔，最终芝士电子狗被禁言，而两位管理安然无恙。并将此事件的矛盾双方从管理与总督转移到主播与总督。</p>
+    </div>
+    <div class="ev">
+      <div class="ev__num">EV-002</div>
+      <span class="ev__icon">◈</span>
+      <h3 class="ev__h">在社交平台对芝士电子狗的攻击</h3>
+      <p class="ev__body">不思議な種（不思议物种）在 B 站芝士电子狗动态下发表<em>「我会一直看着你」</em>等跟踪骚扰、挑衅式发言。</p>
+    </div>
+    <div class="ev">
+      <div class="ev__num">EV-003</div>
+      <span class="ev__icon">▶</span>
+      <h3 class="ev__h">禁言事发前后完整的聊天记录</h3>
+      <p class="ev__body">该完整聊天记录表明，带头开黄腔的是管理，但最终被禁言的是芝士电子狗，两位管理却安然无恙。</p>
+    </div>
+    <div class="ev">
+      <div class="ev__num">EV-004</div>
+      <span class="ev__icon">≡</span>
+      <h3 class="ev__h">Bronyaicu 对芝士电子狗的开盒动态</h3>
+      <p class="ev__body">Bronyaicu 对芝士电子狗 <strong>B 站 UID、QQ 号信息的公开</strong>，此后受害方在 4 月 10 日凌晨被短信轰炸。</p>
+      <p class="ev__body" style="margin-top: 10px;">后续参考资料表明芝士电子狗在事前已将联系方式等关键信息置于置顶动态，开盒说法存疑，但仍存有引导网暴嫌疑。</p>
+    </div>
+    <div class="ev">
+      <div class="ev__num">EV-005</div>
+      <span class="ev__icon">§</span>
+      <h3 class="ev__h">芝士电子狗以公司名义发出公告函</h3>
+      <p class="ev__body">公告函中留有事发原始聊天记录、当事人（包括管理员、主播）以及部分相同站队网友的发言与指控等，网暴证据证实。</p>
+    </div>
+    <div class="ev">
+      <div class="ev__num">EV-006</div>
+      <span class="ev__icon">□</span>
+      <h3 class="ev__h">@Hooxi_Official 亲自下场打擂</h3>
+      <p class="ev__body">乐府老板在 4 月 11 日晚的直播中<strong>直言站队雨中 Neo</strong>，并将整件事的叙事重心从「管理组执法程序是否正当」彻底<strong>挪到了「芝士这个人动机是不是纯」</strong>。</p>
+    </div>
+    <div class="ev">
+      <div class="ev__num">EV-007</div>
+      <span class="ev__icon">■</span>
+      <h3 class="ev__h">4 月 11 日起相关内容遭下架</h3>
+      <p class="ev__body">客观陈述「乐府」「雨中 Neo 事件」负面事实、关键证据链等内容，均在 4 月 11 日起发出后短时间内下架。当前仍流通的争议视频多数<strong>内容模糊具体事实细节，淡化核心矛盾</strong>，并将责任归结为「双方都有错」的言论，人为制造「虚假平衡」。</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 06 LEGAL ══ -->
+<section class="s s--mid" id="legal">
+  <div class="s__header ru">
+    <span class="s__num">06</span>
+    <span class="s__label">法律解剖</span>
+    <span class="s__rule"></span>
+  </div>
+  <h2 class="s__title ru">管理触犯了哪些法律？<br>逐条核对</h2>
+  <p class="s__sub ru">以下均为现行有效法律条文原文，非解读，非推断</p>
+
+  <div class="law-grid ru">
+    <div class="law law--red">
+      <div class="law__ref">《中华人民共和国民法典》第1032条</div>
+      <div class="law__quote">「自然人享有隐私权。任何组织或个人不得以刺探、侵扰、泄露、公开等方式侵害他人的隐私权。」</div>
+      <div class="law__hr"></div>
+      <div class="law__tag">适用分析</div>
+      <p class="law__body">Bronyaicu 未经同意，在网络<strong>公开总督 QQ 号、B 站 UID 等</strong>可识别身份的私密信息。</p>
+    </div>
+
+    <div class="law law--red">
+      <div class="law__ref">《中华人民共和国刑法》第253条</div>
+      <div class="law__quote">「违反国家规定，向他人提供公民个人信息，情节严重的，处 3 年以下有期徒刑／拘役，并处或单处罚金。」</div>
+      <div class="law__hr"></div>
+      <div class="law__tag">适用分析</div>
+      <p class="law__body">Bronyaicu <strong>非法提供、公开公民个人信息</strong>，并引发芝士电子狗遭到大规模人肉、短信轰炸。</p>
+    </div>
+
+    <div class="law law--amber">
+      <div class="law__ref">《中华人民共和国民法典》第1034条</div>
+      <div class="law__quote">「自然人的个人信息受法律保护。个人信息是以电子或者其他方式记录的能够单独或者与其他信息结合识别特定自然人的各种信息，包括自然人的姓名、出生日期、身份证件号码、生物识别信息、住址、电话号码、电子邮箱、健康信息、行踪信息等。个人信息中的私密信息，适用有关隐私权的规定。」</div>
+      <div class="law__hr"></div>
+      <div class="law__tag">适用分析</div>
+      <p class="law__body">Bronyaicu 未经同意，在网络公开的<strong>总督 QQ 号、B 站 UID 等</strong>信息符合上述条文定义。</p>
+    </div>
+
+    <div class="law law--amber">
+      <div class="law__ref">《中华人民共和国治安管理处罚法》第42条</div>
+      <div class="law__quote">「偷窥、偷拍、窃听、散布他人隐私的，处 5 日以下拘留或 500 元以下罚款；情节较重（引发网暴、骚扰）处 5~10 日拘留，可并处 500 元以下罚款。」</div>
+      <div class="law__hr"></div>
+      <div class="law__tag">适用分析</div>
+      <p class="law__body">被害人及其父母被「开盒」，并收到骚扰、短信轰炸，符合情节较重判定条件。</p>
+    </div>
+
+    <div class="law law--amber">
+      <div class="law__ref">《中华人民共和国民法典》第1024条</div>
+      <div class="law__quote">「民事主体享有名誉权。任何组织或者个人不得以侮辱、诽谤等方式侵害他人的名誉权。名誉是对民事主体的品德、声望、才能、信用等的社会评价。」</div>
+      <div class="law__hr"></div>
+      <div class="law__tag">适用分析</div>
+      <p class="law__body">管理不思議な種（不思议物种）<strong>未核实完整经过、夸大事实、错误定性</strong>，属于诽谤性陈述，直接损害总督名誉。</p>
+    </div>
+
+    <div class="law law--amber">
+      <div class="law__ref">《中华人民共和国刑法》第246条</div>
+      <div class="law__quote">「以暴力或其他方法公然侮辱他人或捏造事实诽谤他人，情节严重的，处 3 年以下有期徒刑、拘役、管制或剥夺政治权利。」</div>
+      <div class="law__hr"></div>
+      <div class="law__tag">适用分析</div>
+      <p class="law__body">管理不思議な種（不思议物种）公然<strong>捏造「性骚扰」事实、丑化他人、败坏名誉</strong>，情节严重。</p>
+    </div>
+  </div>
+
+  <div class="resp ru">
+    <div class="resp__card">
+      <span class="badge badge--red">主要责任 · 群管理</span>
+      <h3 class="resp__name">多项行为已明显涉嫌违法，主要涉及民事侵权、行政违法</h3>
+      <p class="resp__body"><strong>未经同意，在网络公开</strong>总督 QQ 号、B 站 UID 等可识别身份的私密信息。</p>
+      <p class="resp__body" style="margin-top:10px">管理<strong>未核实完整经过、夸大事实、错误定性</strong>，属于诽谤性陈述，直接损害总督名誉。</p>
+      <p class="resp__body" style="margin-top:10px">故意歪曲事实，将玩笑<strong>错误定性为「性骚扰」</strong>并公开散布。</p>
+      <span class="resp__foot resp__foot--r">民法典1032条 · 民法典1034条 · 民法典1024条 · 治安管理处罚法第42条 · 刑法第253条 · 刑法第246条</span>
+    </div>
+    <div class="resp__card">
+      <span class="badge badge--amber">次要责任 · 雨中Neo</span>
+      <h3 class="resp__name">纵容群管理实施违法行为</h3>
+      <p class="resp__body">主播未调查、<strong>公开站队、纵容管理违法</strong>，与管理构成共同侵权，需连带承担民事赔偿、道歉责任。若构成刑事，可被列为共犯。</p>
+      <span class="resp__foot resp__foot--a">刑法第25条 · 互联网群组信息服务管理规定第9条</span>
+    </div>
+  </div>
+
+  <div class="gray-box ru">
+    <div class="gray-box__label">⚠ 群管理「性骚扰」定性不成立</div>
+    <p class="gray-box__body">总督「CCB」是群内玩笑接龙（管理员先开黄腔）、<strong>即时撤回、无持续冒犯</strong>。《民法典》第 1010 条（性骚扰）要求违背意愿、性指向、故意冒犯。本案中不满足，管理属<strong>滥用定性、打击报复</strong>。</p>
+  </div>
+</section>
+
+<!-- ══ 06+ ══ -->
+<section class="s s--dark" id="ev">
+  <div class="s__header ru">
+    <span class="s__num">06+</span>
+    <span class="s__label">证据解析（相关链接后续将补充）</span>
+    <span class="s__rule"></span>
+  </div>
+  <h2 class="s__title ru">逐条证据与解析</h2>
+
+  <div class="ev-grid ru">
+    <div class="ev">
+      <div class="ev__num">PART-001</div>
+      <span class="ev__icon">不思议物种</span>
+      <h3 class="ev__h">起黄腔→钓鱼→封口处刑</h3>
+      <p class="ev__body">事情是这样开始的：群友阿九在群里公开问芝士电子狗「什么时候有空」，是想约线下见面。芝士本人就在群里，他报了一串自己的空闲时间。一个再普通不过的排期对话。</p>
+      <p class="ev__body" style="margin-top:10px">转折发生在这里。阿九还没接话，群里第一个跳出来的是<em>不思议物种</em>，他丢出一句「哇，还有线下」，紧接着又补一句「这算上门服务吗」。原本一个排期对话，<strong>从这一刻起被定调为带有性暗示的玩笑</strong>。群友「作战会议」「泡点特产采购」全是顺着他这个口子接下去的。</p>
+      <p class="ev__body" style="margin-top:10px">芝士电子狗那句被钉在耻辱柱上的「来给我 ccb」，是在男管理已经把氛围带到这个程度之后才说出来的，而且他当时<strong>根本不知道对面用户是不是女生</strong>——这一点在后文就得到验证：芝士在另一条对话里，是不思议物种主动告诉他「但这是真菇凉」，芝士才说了「这是个女的啊——那没兴趣了」，原地刹车。然后不思议物种接了一句「对的」。注意这里的时序有多讽刺：<strong>通知芝士「对方是女生」的人，和后来给芝士定性「骚扰」的人，是同一个。</strong></p>
+      <p class="ev__body" style="margin-top:10px">一个真要骚扰的人，不会因为对方是女生就退出。更何况，后续材料还让 Bronya-icu 这条线本身持续挂着一层男性身份疑云——若对面也为男性，则「对女性骚扰」这一定性本身连成立的基础都没有了。</p>
+      <p class="ev__body" style="margin-top:10px">然后是这个事件最令人不舒服的部分。芝士说「那没兴趣了」之后，<strong>不思议物种</strong>先回了意味深长的<em>「对的」</em>，紧接着 <strong>Bronyaicu</strong> 在约一分钟内禁言芝士。注意：<strong>芝士这一分钟里一个字都没来得及打</strong>。就在他已经被封口、连键盘都按不动的这个状态下，不思议物种追加了一连串话：先是<em>「快点道歉」「没机会了」</em>，再是<em>「正义制裁」</em>，最后是<em>「默哀一秒钟」「狂笑一小时」</em>。</p>
+    </div>
+
+    <div class="ev">
+      <div class="ev__num">PART-002</div>
+      <span class="ev__icon">不思议物种</span>
+      <h3 class="ev__h">B 站三连自爆，等于自己写了认罪书</h3>
+      <p class="ev__body" style="margin-bottom:10px">这一段证据完全来自不思议物种自己在B站的公开发言，没有任何「群友爆料二手转述」，全是他自己一字一句敲出来的。三句话拼起来就是一份完整的动机自述。</p>
+        <p class="ev__quote">「看看，开黄腔是我说的，雨中 neo 最后可是定性的骚扰」</p>
+        <p class="ev__quote">面对群友质问「你说上门服务的时候为啥没被禁言」的回复「吃饭呢，因为我是管理啊」——随后旁观者回复「好大的官威啊」</p>
+        <p class="ev__quote">QQ 群早期发言「就个人而言，我是无法接受芝士的串子性格」</p>
+      <p class="ev__body" style="margin-bottom:10px">这三句话单独看每一句都不算什么，拼在一起就是另一回事了。第一句他自己承认「开黄腔是我说的」——黄腔的源头不是芝士，是我。第二句他自己承认双标的理由就是<em>「因为我是管理啊」</em>——同样的话从我嘴里说出来不算事，从你嘴里说出来就是死罪，区别只在于身份不在于内容。第三句他自己承认对芝士本来就有意见——<em>「无法接受他的串子性格」</em>，这话不一定是事先就说的，但至少说明他对这个人的厌恶不是从那一句「来给我 ccb」才开始的，而是在更早的某个时间点就已经存在。</p>
+      <p class="ev__body" style="margin-bottom:10px"><strong>把这三句话叠在一起你就会发现，这件事从一开始就不是一次执法，而是一次等到机会的清算。</strong>一个早就讨厌某人的管理，亲手起了一个雷的氛围，等他踩进去再用职务把他罚掉，这套流程哪怕每一步看起来都有规则做依据，本质上也是埋伏。</p>
+    </div>
+
+    <div class="ev">
+      <div class="ev__num">PART-003</div>
+      <span class="ev__icon">不思议物种</span>
+      <h3 class="ev__h">罚后跨平台围猎，事后在芝士 B 站个人页持续发言</h3>
+      <p class="ev__body" style="margin-bottom:10px">处罚一旦执行完，事情就该结束了——这是任何一个成年人都该有的常识。但不思议物种没停。他用<em>不思议物种</em>和<em>不思議な種</em>两个账号同时出现在受害方的 B 站个人页底下，刷的是这种话：</p>
+        <p class="ev__quote">「我就看着你」</p>
+        <p class="ev__quote">「我会一直看着你」</p>
+        <p class="ev__quote">「来和我聊，我随时奉陪」</p>
+      <p class="ev__body">除「我会一直看着你」之外，还在芝士的页面下随机抛出各种挑衅式发言。其中有一条比较有代表性：<em>「嘛，这种老头，至少雨中 neo 受不起。」</em>此处「老头」指的是「有钱人／大金主」的意思，非指字面年龄，整句话的潜台词是「这种花大钱的金主，雨中 Neo 配不上／接不起」，属于用「贬低当事人配不上主播」的方式继续打击对方。</p>
+      <p class="ev__body" style="margin-bottom:10px">如果说前文在 QQ 群里的处刑还能勉强用「管理职责」四个字遮一遮，那这一段就彻底没法遮了。一个群管理的权力边界应该止步于他管理的群——出了那个群，他和当事人就只是两个普通用户。但<strong>不思议物种</strong>把权力延伸到了芝士的 B 站个人页，用两个账号去刷「我会一直看着你」等，这就不是管理，这是<strong>跟踪骚扰</strong>。「老头」「富哥」等标签的功能是把当事人继续公开示众，让旁观者觉得他活该。这一整套方式的目的从来不是让芝士反省，而是让芝士这个人在 B 站上不敢再露面、不敢再发声、最终只能销号走人。<strong>这不叫执法的延伸，这叫人格谋杀。</strong></p>
+    </div>
+
+    <div class="ev">
+      <div class="ev__num">PART-004</div>
+      <span class="ev__icon">不思议物种</span>
+      <h3 class="ev__h">在疑似《告知函》评论区组织「堆楼」</h3>
+      <p class="ev__quote">置顶评论「继续继续，别停啊，争取在我上课之前堆他个一千楼」<br>
+        「卧槽，昨晚上就想这么玩了，可惜被勒令不许发表暴论了，现在爽了」<br>
+        「主播都没了，我想怎么玩就怎么玩」</p>
+      <p class="ev__quote">对「嘉豪这么做能让 V 喜欢你吗」的回复：「不能，但是能让她远离 v 的生活」</p>
+      <p class="ev__quote">「我就是为了对线才搁这发表暴论的好吧」</p>
+      <p class="ev__body">此处出现关键的隐藏信息<em>「被勒令不许发表暴论」</em>：它说明主播或某个上位者事先曾经制止过他发表「暴论」——这次未必是针对芝士电子狗这一个事件，可能是更早的、其他类似场合的发言被压过，但无论是哪一次，至少能确定一件事：他自己清楚有人不允许他这么搞。但他选择在主播不在场的时间窗口里，组织一千楼的「堆楼大会」，配合自己的台词是<em>「昨晚上就想这么玩了，现在爽了」</em>。换言之，这个人完全清楚自己的行为越界，他只是在等一个主播不在的时机。最后那句<em>「能让她远离 v 的生活」</em>才是整段话里最有信息量的一句——这里的「她」指的是雨中 Neo，他在做这一切的时候把自己想象成了一个为了主播好的角色——他要把芝士这种「看的人」清掉，让雨中 Neo 最终能「远离 V 这一行」，让她「解脱」。<strong>这是非常典型的中二式自我感动，把私人的情绪表演成无私的奉献。</strong>底下评论区的群友也都看出来了，回复里有一句阴阳怪气的反讽<em>「诶我我要是那个不得当场爱上你啊太深情了太能背负了」</em>——一句话戳穿了他这段话的姿态。这已经不是管理员越界了，这是<strong>借管理员的身份在执行私刑，而且把私刑包装成了「为主播好」</strong>。</p>
+    </div>
+    <div class="ev">
+      <div class="ev__num">PART-005</div>
+      <span class="ev__icon">Bronya-icu</span>
+      <h3 class="ev__h">援引隐私条款挂人，规则执行双标</h3>
+      <p class="ev__body">QQ 群里她总共就发了四句话：「4.12-4.14 没空」「也在上海」「什么玩意？」「我也不撤回了，你自己找群主去」。话少，动作硬，1 分钟内禁言、不撤回、不解释，把申诉权直接踢给群主。如果故事到这里结束，她至少在程序上是站得住的——你触线，我执法，仅此而已。</p>
+      <p class="ev__body" style="margin-top:10px">但事件之后她做了两件事，让这个「程序正义」的姿态完全垮了。第一件事是 <strong>B 站发动态挂人</strong>。她公开了芝士的用户昵称、QQ 号和 B 站 UID，定性「性骚扰」，并援引群规第三条作为依据。问题在于，她贴出来的群规第三条原文写的是<em>「不得侮辱、骚扰或攻击群成员，不得暴露他人隐私」</em>。她用来定别人罪的同一条规则里，<strong>写着她正在做的事是错的</strong>。被群友质问时，「她」回应<em>「怎么知道你没触犯全球任意一条法律」</em>，由此可见面对同一套规则，作用于他人而不作用于自己的<strong>双标</strong>。</p>
+      <p class="ev__body" style="margin-top:10px">她在程序上的硬度其实并不是问题——一个执法者可以冷、可以快、可以不留情面，这都没什么。真正的问题是<strong>她在事后做的事打碎了她自己的程序正义</strong>。挂人这个动作本身就违反了她援引的同一条规则，这不是技术性瑕疵，是<strong>规则在她手里只对别人有效、对自己无效</strong>。被质问的时候，她拿不出任何规则上的解释，只能甩出<em>「怎么知道你没触犯全球任意一条法律」</em>——这话翻译成普通话就是「你闭嘴吧反正我有理」，<strong>这是典型的土皇帝逻辑，而非管理员的逻辑。</strong>再叠加一年前那句<strong><em>「刷了钱当然先以自己体验为主」</em></strong>，同一个人，同一个 B 站账号，去年她替花钱的人说话，今年她以<em>「没考虑别人体验」</em>为由禁言一个花钱的人。立场翻转一百八十度，唯一不变的是每次她都站在更有权力的那一边。</p>
+    </div>
+    <div class="ev">
+      <div class="ev__num">PART-006</div>
+      <span class="ev__icon">Hooxi_Official</span>
+      <h3 class="ev__h">乐府老板代替主播本人亲自下场打擂</h3>
+      <p class="ev__body">在乐府老板 <strong>@Hooxi_Official</strong> 自己 B 站直播间公开发言（非二手转述）中，他自报的身份定位清晰：<em>雨中 Neo 的工会上级</em>。问题也正出在这里——一边说主播「还在失联的状态」，一边在<em>「我还没获得 Neo 的允许」</em>的情况下开直播亲自下场对线芝士。逻辑问题由此显现：<strong>主播本人未授权，作为工会老板的你凭什么代她出征？</strong>工会和艺人是两回事，主播的立场应由主播自己来说——<strong>在她失联、没开口的情况下，工会老板已经替她下场</strong>，这不叫维权，这叫自行其是。</p>
+      <p class="ev__body" style="margin-top:10px">乐府老板这一场直播，把整件事的叙事重心从「管理组执法程序是否正当」彻底<strong>挪到了「芝士这个人动机是不是纯」</strong>。这就是炒作论的通用模板：<strong>把结构性问题追责转化为个人品性审判</strong>。他攻击芝士个人的每一点单独看都可辩论，但对管理组三件事的全程回避，让整场发言的立场基础崩塌。</p>
+      <p class="ev__body" style="margin-top:10px">此外，<strong>工会老板公开把自家艺人定性为<em>「玉玉症活靶子、没反抗能力」</em></strong>，配合<strong>「Neo 现在还在失联的状态」</strong>的背景——这不是在为主播撑腰，这是在借主播身份为自己的下场打擂找合法性。<strong>若真要维护主播，最该做的第一件事，是让主播自己出来说话</strong>，而不是在她失联的状态下，工会老板代替主播本人对线。</p>
+    </div>
+    <div class="ev">
+      <div class="ev__num">PART-007</div>
+      <span class="ev__icon">芝士电子狗</span>
+      <h3 class="ev__h">禁言后的反击与「开盒」遭遇</h3>
+      <p class="ev__body">芝士电子狗是雨中 Neo 舰队里居中展示的总督，Bronya-icu 和不思议物种都在下方「舰长」列表里。根据 B 站直播舰队的公开价位，总督约 2 万元／月，舰长 198 元／月，可知双方的<strong>充值差距是整整 100 倍</strong>。把这一点摆出来不是为了说「花钱多就该被让着」——这件事<strong>跟他花多少钱完全没关系</strong>，再多钱也不会让一句越界的话变得不越界，再少钱也不会让一次失衡的处理变得平衡。摆出充值数据只为把另一个流传的版本提前澄清掉：有人在外群说他是个「被穷学生管理处刑的炒作号」，事实顺序和这个描述不符。</p>
+      <p class="ev__body" style="margin-top:10px">4 月 9 日晚 19:24，芝士电子狗发布视频《[v 圈清雨中 neo] 管理是清雨？敢对总督这样？一分钟不道歉就禁言的神人舰长群！》，在被下架前播放量达 43 万。简介里他给出了非常清晰的三段论：<em>「雨中 Neo 既然要把事情定性成这样并且让我知道了，<strong>我为了反制造谣，只能发个视频</strong>」</em>——他强调的是<strong><em>「反制造谣」</em>而不是主动开团</strong>；接着是<em>「事情是她定性的」「管理员作为她选成了的，是直播间一部分的延伸，如果管理员有问题，主播不可能置身事外」</em>；最后是<em>「我为什么不去直接找对方沟通——一方面是她拒绝交流，另一方面是无法跟哈气应激人交流」</em>。</p>
+      <p class="ev__body" style="margin-top:10px">4 月 10 日深夜，他发了第二个视频，视频内容显示他的手机短时间内接收了大量企业短信平台的验证码，是非常典型的恶意注册攻击，俗称「短信轰炸」。视频标题使用<strong>「疑似」</strong>二字，<strong>并未把锅直接砸向主播或观众</strong>。</p>
+    </div>
+    <div class="ev">
+      <div class="ev__num">PART-008</div>
+      <span class="ev__icon">芝士电子狗</span>
+      <h3 class="ev__h">受「开盒」状况与三方对照</h3>
+      <p class="ev__body">芝士方立场：父母遭连续两天短信轰炸；QQ 群公告「疑似开盒」；动态暗指 Neo 粉丝。</p>
+      <p class="ev__body" style="margin-top:10px">外部可见范围：相关技术链路、账号归属与平台侧核验结果目前都没有公开；如果事件仍在处理中，这部分材料暂不对外展示本来就很正常。对场外读者来说，更稳妥的说法不是要求对方把案件证据全部摊开，而是承认：外部目前无从独立判别归属，不公开不等于不存在。</p>
+      <p class="ev__body" style="margin-top:10px">乐府方立场：「开盒老生常谈你拿证据出来」，反指芝士欺负玉玉症小姑娘。该立场存在论述缺口，包括对管理组三件事全程回避、主播失联未授权下主动下场。</p>
+      <p class="ev__body" style="margin-top:10px">可核实事实：短信轰炸截图存在；「并案处理」「助理」等措辞只能说明芝士一侧声称家里可能具备法律处理资源，但父亲是否为律师、是否为上海执业律师，仅凭这些公开截图<strong>还不能写成实锤</strong>；发起方归属目前也没有公开到足以让场外独立核验的技术证据。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 07 EDITORIAL ══ -->
+
+<section class="s s--dark" id="ed">
+  <div class="s__header ru">
+    <span class="s__num">07</span>
+    <span class="s__label">证据疑云</span>
+    <span class="s__rule"></span>
+  </div>
+  <h2 class="s__title ru">雨中 Neo 事件<br>其他证据补充说明</h2>
+  <p class="s__sub ru">以下为本站编辑基于事实、参考并对部分第三方资料所作的补充说明，仅供参考</p>
+
+  <div class="ed-grid">
+    <div class="ed ru" data-d="0">
+      <div class="ed__tag">证据疑云 · 壹</div>
+      <h3 class="ed__h">Bronyaicu 性别身份存疑</h3>
+      <p class="ed__body">网站 aicu.cc 查询对应账号的历史评论存档，能看到<em>「我只考虑我现在的生活质量会不会因为找了女人生了孩子而下降」「一个男性，帮着女性说话？」</em>以及<em>「没有女楼，女拳百万年功力一拳打炸教学楼」</em>等表述。仅凭这类存档，<strong>无法直接实锤账号操作者的现实身份</strong>，但已经足够让 Bronya-icu 这条线持续带着一层<strong>男性身份疑云</strong>。</p>
+    </div>
+    <div class="ed ru" data-d="1">
+      <div class="ed__tag">证据疑云 · 贰</div>
+      <h3 class="ed__h">表格举证、反击话术与「她」的位置变化</h3>
+      <p class="ed__body">Bronyaicu 于 4 月 13 日晚发出动态：上面挂出一张表格化的打赏清单，字段包括用户 ID、主播 ID、直播间 ID、商品名称、支付总价与购买数量，总金额合计约 60565.9 元。就公开呈现效果看，这很像是在回应外界对「谁给得更多」「谁更有资格说话」的争议，试图证明「她」对主播的打赏并不比芝士电子狗轻。</p>
+      <p class="ed__body" style="margin-top:10px">但这里最需要踩稳的一点也很明确：这张表格的来源、导出路径、生成规则和平台对应关系，<strong>场外读者均无从独立核验</strong>。它可以看作「她」在主动举证，也能说明「她」想把自己放进「我也是实打实消费过、不是站着说话不腰疼」的位置；可单凭这一截图，还不能把表格本身写成已经被外部核验过的硬证据。</p>
+    </div>
+    <div class="ed ru" data-d="2">
+      <div class="ed__tag">证据疑云 · 叁</div>
+      <h3 class="ed__h">反击长图 & 受害方历史发言</h3>
+      <p class="ed__body">Bronya-icu 制作反击长图，方向更加明显。争议并没有被重新拉回到问题本身，而是<strong>被改写成了另外一套叙事</strong>：芝士是不是在恶意刷屏，是不是「非理智消费」，是不是在借消费与打赏包装自己，甚至是不是在欺负雨中 Neo 这个「小女生」。这已经不太像管理员在补程序说明了，而更像一次围绕「芝士这个人」的立场化回击。</p>
+      <p class="ed__body" style="margin-top:10px">话术重心把原始争议从「管理组具体做了什么」转移到「芝士是不是坏人、是不是在消费主播」，<strong>已经偏离了原先需要关注的问题</strong>——谁先起黄腔、禁言与要求道歉是否几乎同步、挂人与公开化处理是否过界。</p>
+      <p class="ed__body" style="margin-top:10px">受害方历史发言都更强调芝士本人的人身问题，而不是把管理链条本身重新拆开。公开材料目前还不足以证明两边就是同一人操作、同一来源授意，也不能直接写成「这不像本人做的，所以一定另有代笔」；但至少能看出来，话术重心确实越来越像——都是把原始争议从「管理组具体做了什么」牵回到「芝士是不是坏人、是不是在消费主播」。</p>
+    </div>
+    <div class="ed ru" data-d="3">
+      <div class="ed__tag">证据疑云 · 肆</div>
+      <h3 class="ed__h">「总督炒作论」的四个争议点</h3>
+      <p class="ed__body"><em>钢笔</em>的发言出现在一个跟雨中 Neo 没有直接关系的 FGO 玩家群里。他自称认识主播、运营是他朋友。他给出的版本<strong>和前面所有证据完全相反</strong>——他说这件事是芝士电子狗找人配合演的、聊天记录是剧本、目的是给自己起号、那个管理（指 Bronya-icu）其实是老观众打钱不比芝士少。同时，他提出的观点存在一定争议，下面进行详细分析。</p>
+      <p class="ed__body" style="margin-top:10px">①<strong>「这个主播我认识，他运营是我朋友，这个总督是来炒作的」</strong>。但从时间顺序看，<em>芝士的两个 B 站视频都是在雨中 Neo 替管理组定性「骚扰」之后才发的</em>——视频一晚于主播定性约 2 小时，视频简介里他自己说「为了反制造谣只能发个视频」。一个事先策划好的炒作号，不会是被骂两小时之后才匆忙开机的节奏；炒作是预谋的、有铺垫的，他这边更像是被推到墙角后的回头一击。这个「炒作论」和时间顺序对不上。</p>
+      <p class="ed__body" style="margin-top:10px">②<strong>「他挨了几句骂在那顶嘴，到了让他道歉的时候又不说话了」</strong>。但 QQ 群截图的时间线是：芝士说完「那没兴趣了」→男管理回「对的」→大约一分钟内 Bronya-icu 直接禁言。<strong>从「那没兴趣了」到禁言的这一分钟里，芝士本人没有任何发言记录</strong>，所谓「挨骂顶嘴」在原始记录里找不到对应。男管理后来自己也在QQ群里<strong>说过「嘛，只给了他一分钟的时间道歉，或者两分钟」</strong>——连执行方自己都在自问是不是太快，但钢笔这边的描述是「在那顶嘴」，两边的时间感差距很大。</p>
+      <p class="ed__body" style="margin-top:10px">③<strong>「禁言了之后也不私聊找主播，也不私聊跟女管理道歉，也不私聊跟禁言他的管理解释，直接把群退了在 B 站开视频放庭」</strong>。这一条<strong>没法直接证伪</strong>，但也<strong>没法直接证真</strong>。我们目前的证据里看不到芝士有没有加过主播好友，也看不到主播有没有反向尝试联系过他——可能他加过被拒、可能没加、也可能主播主动私聊过他被他拒绝。在这些都不清楚的情况下，<strong>把「没私聊」直接等同于「不想道歉」「态度有问题」是一种简化</strong>。私聊渠道是不是顺畅的，需要双方的可见证据，不是单方一句话就能成立的判断。</p>
+      <p class="ed__body" style="margin-top:10px">④<strong>「在 B 站开团压根不提群管理，直接就说要主播对我不公平我要搞死主播」</strong>。但芝士 B 站视频的简介原文里，三段论的中段就是写管理的：<em>「管理员作为她选成了的，是直播间一部分的延伸，如果管理员有问题，主播不可能置身事外」</em>——他不仅提了，还把管理放在「主播该担责」这条逻辑链的中间。<strong>「压根不提群管理」和视频简介内容对不上</strong>。</p>
+    </div>
+    <!--
+    <div class="ed ru" data-d="4">
+      <div class="ed__tag">证据疑云 · 伍</div>
+      <h3 class="ed__h">反诚信——向全社会输出"好人没好报"毒液</h3>
+      <p class="ed__body"></p>
+    </div>
+    <div class="ed ru" data-d="5">
+      <div class="ed__tag">证据疑云 · 陆</div>
+      <h3 class="ed__h">反公义——欺软怕硬，专对底层下手的懦夫本色</h3>
+      <p class="ed__body"></p>
+    </div>
+    -->
+  <!--
+    <div class="ed ed--wide" style="opacity:1;transform:none">
+      <div class="ed__tag">综合评价</div>
+      <h3 class="ed__h" style="font-size:calc(clamp(16px,2.5vw,22px) * var(--fs-mul));margin-bottom:24px">雨中 Neo 的管理是什么人？六条判词，每一条都严丝合缝：</h3>
+      <div class="vd-grid">
+        <div class="vd ru" data-d="0">
+          <div class="vd__charge">罪名一</div>
+          <div class="vd__name">反人民</div>
+          <p class="vd__desc"></p>
+        </div>
+        <div class="vd ru" data-d="80">
+          <div class="vd__charge">罪名二</div>
+          <div class="vd__name">反劳动</div>
+          <p class="vd__desc"></p>
+        </div>
+        <div class="vd ru" data-d="160">
+          <div class="vd__charge">罪名三</div>
+          <div class="vd__name">反法治</div>
+          <p class="vd__desc"></p>
+        </div>
+        <div class="vd ru" data-d="240">
+          <div class="vd__charge">罪名四</div>
+          <div class="vd__name">反文明</div>
+          <p class="vd__desc"></p>
+        </div>
+        <div class="vd ru" data-d="320">
+          <div class="vd__charge">罪名五</div>
+          <div class="vd__name">反诚信</div>
+          <p class="vd__desc"></p>
+        </div>
+        <div class="vd ru" data-d="400">
+          <div class="vd__charge">罪名六</div>
+          <div class="vd__name">反公义</div>
+          <p class="vd__desc"></p>
+        </div>
+      </div>
+      <div class="ed__final">
+        历史的车轮滚滚向前，每一个以为自己可以凌驾于人民、法律、道义之上的人，最终都被碾入了历史的尘埃。
+      </div>
+    </div>
+  -->
+  </div>
+</section>
+
+
+<!-- ══ 08 AFTERMATH ══ -->
+<section class="s s--mid" id="aft">
+  <div class="s__header ru">
+    <span class="s__num">08</span>
+    <span class="s__label">事件后续</span>
+    <span class="s__rule"></span>
+  </div>
+  <h2 class="s__title ru">从曝光到删档<br>有多快？</h2>
+
+  <div class="aft ru">
+    <div class="aft__item"><div class="aft__date">4月9日</div><div class="aft__bar"></div><div class="aft__text">曝光视频《[v 圈清雨中 neo] 管理是清雨？敢对总督这样？一分钟不道歉就禁言的神人舰长群！​》发布，舆论引爆。</div></div>
+    <div class="aft__item"><div class="aft__date">4月10日</div><div class="aft__bar"></div><div class="aft__text">三角洲经济学教父发表《总督被污蔑 X 骚扰被开被短信轰炸之后开公司反击！新清雨事件后续！》视频，谈论此事件，此事件在此刻跨圈扩散。</div></div>
+    <div class="aft__item"><div class="aft__date">4月11日</div><div class="aft__bar aft__bar--red"></div><div class="aft__text">雨中 Neo 所属公会老板 <em>@Hooxi_Official</em> 开始下场，清理下架所有关于此事件流量较高的视频。</div></div>
+    <div class="aft__item"><div class="aft__date">4月12日</div><div class="aft__bar aft__bar--amber"></div><div class="aft__text">雨中 Neo 视频《道歉声明》开始出现<strong>大规模删评</strong>，删除速率一度达到 2 小时超 9000 条评论被删除。</div></div>
+    <div class="aft__item"><div class="aft__date">4月14日</div><div class="aft__bar aft__bar--red"></div><div class="aft__text">双方关于此事件的内容<strong>均被下架</strong>，包括受害方的曝光视频及其后续、当事人的道歉视频等，平台层面对其处理进一步升级。</div></div>
+  </div>
+</section>
+
+<!-- ══ VERDICT ══ -->
+<div class="verdict">
+  <div class="verdict__inner ru">
+    <div class="verdict__label">// 结语</div>
+    <p class="verdict__q">
+      「一句玩笑涉嫌对女生的冒犯」——这是雨中 Neo 群管理发动这场禁言所需要的全部理由。<br>
+      就是 4 月 8 日中午的一次约谈线下活动，就是一次不经意的回复，<br>
+      就足以让他被群管理禁言，让<strong>近 2 万元的总督打赏</strong>变得一文不值。<br><br>
+      他付出的不仅是逾 2 万元的金钱，更是对主播的信任，是一个 43 级粉丝牌背后真实的情感投入。<br>
+      一次禁言背后，是对基本尊重和法律保护的践踏。<br>
+      <strong>覆巢之下，安有完卵。</strong>
+    </p>
+    <div class="verdict__stamp">
+      UCHUU_Neo.docx · 事件档案<br>
+      所有细节均来源于可查询内容和多方总结 · 法律责任以最终司法认定为准
+    </div>
+  </div>
+</div>
+
+<!-- ══ REFS ══ -->
+<section class="s s--mid" id="refs">
+  <div class="s__header ru">
+    <span class="s__num">09</span>
+    <span class="s__label">参考资料</span>
+    <span class="s__rule"></span>
+  </div>
+  <h2 class="s__title ru">延伸阅读</h2>
+  <ul class="ref-list ru">
+    <li><a href="https://www.bilibili.com/video/BV193DfB2EXS" target="_blank" class="ref-link"><span class="ref-badge">B 站</span><span>虚拟主播掉粉榜 26 年 4 月 9 日</span><span>↗</span></a></li>
+    <li><a href="https://www.bilibili.com/video/BV1ABDSBMEno" target="_blank" class="ref-link"><span class="ref-badge">B 站</span><span>（补档一）雨中 Neo 道歉视频（有弹幕版）</span><span>↗</span></a></li>
+    <li><a href="https://www.bilibili.com/opus/1189667964895363088" target="_blank" class="ref-link"><span class="ref-badge">B 站</span><span>雨中 Neo 禁言开盒总督事件，精简版，全图文解析（新增凌晨谈判等内容）持续跟进中</span><span>（已失效）</span></a></li>
+    <li><a href="https://www.bilibili.com/opus/1189665667132948485" target="_blank" class="ref-link"><span class="ref-badge">B 站</span><span>雨中 Neo 事件记录</span><span>↗</span></a></li>
+    <li><a href="https://www.bilibili.com/opus/1191520616266596408" target="_blank" class="ref-link"><span class="ref-badge">B 站</span><span>雨中 Neo 与芝士电子狗事件复盘_V2</span><span>（已失效）</span></a></li>
+    <li><a href="https://b23.tv/Em7WCuy" target="_blank" class="ref-link"><span class="ref-badge">B 站</span><span>【地上 V 圈·事件篇】V 圈史上最恶劣的 CCB</span><span>（已失效）</span></a></li>
+    <li><a href="https://b23.tv/m30vlrz" target="_blank" class="ref-link"><span class="ref-badge">B 站</span><span>雨中 neo 的总督礼物是开盒+短信轰炸？疑似被 vtb 本人或观众开盒并轰炸</span><span>（已失效）</span></a></li>
+    <li><a href="https://b23.tv/Ktd2A1K" target="_blank" class="ref-link"><span class="ref-badge">B 站</span><span>[反转] 总督禁言事件 管理员竟然男装女？</span><span>（已失效）</span></a></li>
+    <li><a href="https://b23.tv/4OZg3Qt" target="_blank" class="ref-link"><span class="ref-badge">B 站</span><span> 乐府直言帮助雨中 neo：想和 50w 的大律师较量，觉得很有意思</span><span>（已失效）</span></a></li>
+    <li><a href="https://cheesesynx.feishu.cn/wiki/NQUtwEr6giA4XfkbEepcBrtWnmd" target="_blank" class="ref-link"><span class="ref-badge">飞书</span><span>以雨中 Neo 事件受害者之名：我们绝不向颠倒黑白的恶意与资本低头</span><span>↗</span></a></li>
+    <li><a href="https://gavf02i0y09.feishu.cn/wiki/NwWWwnYNkidohKk77DLcwbOnn1c" target="_blank" class="ref-link"><span class="ref-badge">飞书</span><span>芝士电子狗事件完整梳理</span><span>（已失效）</span></a></li>
+    <li><a href="https://zh.moegirl.org.cn/%E9%9B%A8%E4%B8%ADNeo#.E7.A6.81.E8.A8.80.E9.80.A0.E8.B0.A3.E6.80.BB.E7.9D.A3.E4.BA.8B.E4.BB.B6" target="_blank" class="ref-link"><span class="ref-badge">萌百</span><span>雨中 Neo——禁言造谣总督事件 · 萌娘百科</span><span>↗</span></a></li>
+  </ul>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<!-- ══ CONTACT ══ -->
+<section class="s s--dark" id="contact">
+  <div class="s__header ru">
+    <span class="s__num">10</span>
+    <span class="s__label">联系</span>
+    <span class="s__rule"></span>
+  </div>
+  <h2 class="s__title ru">联系我们</h2>
+  <div class="ru" style="max-width:560px">
+    <p style="font-size:calc(14px * var(--fs-mul));color:var(--c-dim);line-height:1.9;margin-bottom:24px">
+      如果你也是想要客观了解雨中 Neo 事件的群众，或有新的相关证据，欢迎联系。
+      同样欢迎补充事实信息、指出错误或提供更多资料。
+    </p>
+    <a href="mailto:desmagmeta@163.com" class="contact-link">
+      <span class="contact-label">邮件</span>
+      <span class="contact-addr">desmagmeta@163.com</span>
+      <span class="contact-arrow">→</span>
+    </a>
+    <a href="https://space.bilibili.com/515021432" target="_blank" class="contact-link" style="margin-top:2px">
+      <span class="contact-label">B站</span>
+      <span class="contact-addr">飘云易旅</span>
+      <span class="contact-arrow">→</span>
+    </a>
+    <!--
+    <a href="#" class="contact-link" style="margin-top:2px" onclick="navigator.clipboard.writeText('1265318015');this.querySelector('.contact-arrow').textContent='✓';setTimeout(()=>this.querySelector('.contact-arrow').textContent='→',1500);return false">
+      <span class="contact-label">QQ</span>
+      <span class="contact-addr">1265318015</span>
+      <span class="contact-arrow">→</span>
+    -->
+    </a>
+  </div>
+</section>
+
+<div style="text-align:center;padding:28px 20px 0;font-family:var(--f-mono);font-size:calc(12px * var(--fs-mul));color:var(--c-dim);line-height:2">
+  <div style="margin-bottom:6px;opacity:.5">// 事件持续跟进中</div>
+  如发现新进展、补充证据或有任何修改建议<br>
+  欢迎随时联系站长更新本档案<br>
+  <span style="opacity:.7">邮件 <a href="mailto:desmagmeta@163.com" style="color:inherit;text-decoration:underline">desmagmeta@163.com</a><!-- · QQ <span id="footer-qq" style="cursor:pointer;text-decoration:underline" onclick="navigator.clipboard.writeText('1265318015');this.textContent='已复制✓';setTimeout(()=>this.textContent='1265318015',1500)">1265318015</span> --> · B站 <a href="https://space.bilibili.com/515021432" target="_blank" style="color:inherit;text-decoration:underline">飘云易旅</a></span>
+</div>
+
+<footer class="site-footer">
+  <div>
+    <div class="footer__logo">UCHUU_Neo.docx · 总督禁言事件档案</div>
+    <div class="footer__note" style="margin-top:5px">本页面为事件公开信息整理，不代表任何法律意见 · 部分引用已标注来源存疑，请以可查证的一手资料为准</div>
+    <div style="margin-top:10px;display:inline-block;padding:5px 12px;border:1px solid var(--c-red);font-family:var(--f-mono);font-size:calc(11px * var(--fs-mul));letter-spacing:.06em">
+      <a href="https://github.com/StrideNotStrike/UchuuNeo-event-archive" target="_blank" style="color:var(--c-red);text-decoration:none">⛓ 源码已公开并存档 · GitHub ↗</a>
+    </div>
+    <div style="margin-top:16px;font-family:var(--f-mono);font-size:calc(10px * var(--fs-mul));color:var(--c-faint);line-height:1.8;max-width:480px">
+      免责声明：本站内容均来源于公开报道、直播录像及当事人陈述，仅作事件记录用途，不构成任何法律意见或定性结论。本站与雨中 Neo、芝士电子狗、不思議な種、乐府等任何当事方均无利益关联。如有内容错误或侵权，请通过联系页面告知，核实后将及时更正或删除。法律责任以最终司法认定为准。
+    </div>
+  </div>
+  <div>
+    <div class="footer__domain">UCHUU_Neo.docx</div>
+    <div class="footer__note" style="margin-top:4px;text-align:right">CASE FILE · 2026</div>
+  </div>
+</footer>
+
+<script src="js/loader.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/canvas.js"></script>
+<script src="js/reveal.js"></script>
+<script src="js/counters.js"></script>
+<script src="js/interactions.js"></script>
+</body>
+</html>

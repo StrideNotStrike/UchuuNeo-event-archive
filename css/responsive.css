@@ -1,0 +1,330 @@
+/* ══════════════════════════════════════════════
+   RESPONSIVE — mobile-first
+   Default = mobile single column
+   We ADD layout at wider breakpoints
+══════════════════════════════════════════════ */
+
+/* ── 640px ── */
+@media (min-width: 640px) {
+  .s       { padding: 80px 36px; }
+  .verdict { padding: 96px 36px; }
+  .hero    { padding: 80px 36px 0; }
+  .hero__tape { padding: 10px 36px; }
+
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* 2-col grids */
+  .q-grid  { grid-template-columns: 1.5fr 1fr 1fr; }
+  .q-grid .q:first-child { grid-row: 1 / 3; }
+  .ev-grid  { grid-template-columns: repeat(2, 1fr); }
+  .law-grid { grid-template-columns: repeat(2, 1fr); }
+  .resp     { grid-template-columns: 1fr 1fr; }
+  .ed-grid  { grid-template-columns: repeat(2, 1fr); }
+  .vd-grid  { grid-template-columns: repeat(2, 1fr); }
+
+  /* wide card spans both columns */
+  .ed--wide { grid-column: 1 / -1; }
+
+  /* vd-grid fills parent */
+  .vd-grid { width: 100%; }
+
+  /* banner 4-col */
+  .hero__banner { grid-template-columns: repeat(2, 1fr); }
+  .bn { border-bottom: none; }
+  .bn:nth-child(even)      { border-right: 1px solid var(--c-line); }
+  .bn:nth-last-child(-n+2) { border-bottom: none; }
+  .bn:last-child           { border-right: none; }
+}
+
+/* ── 900px ── */
+@media (min-width: 900px) {
+  .s       { padding: 96px 56px; }
+  .verdict { padding: 112px 56px; }
+  .hero    { padding: 0 56px 0; padding-top: 0; }
+  .hero__tape { padding: 10px 56px; }
+
+  /* ── Nav：logo左 / links居中 / right右 ── */
+  .nav__logo   { order: 1; font-size: 11px; flex-shrink: 0; }
+  .nav__links  {
+    display: flex; order: 2;
+    flex: 1;                    /* 撑满中间空间 */
+    justify-content: center;    /* 链接整体居中 */
+    width: auto; gap: 28px; padding: 0;
+  }
+  .nav__right  { order: 3; margin-left: 0; } /* 取消 auto-push，靠 flex 自然右对齐 */
+  .nav__status { display: flex; }
+  .nav         { padding: 20px 56px; flex-wrap: nowrap; }
+  .nav.stuck   { padding: 12px 56px; }
+
+  /* hero content pushed to bottom of viewport */
+  .hero {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 80px;
+  }
+
+  /* stats: back to horizontal row on desktop */
+  .hero__stats {
+    flex-direction: row;
+  }
+  .stat {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-bottom: none;
+    border-right: 1px solid var(--c-line);
+  }
+  .stat:last-child { border-right: none; border-bottom: none; }
+  .stat__l { text-align: left; }
+  .stat__n { font-size: calc(22px * var(--fs-mul)); margin-bottom: 5px; }
+
+  /* characters side-by-side */
+  .char-wrap {
+    display: grid;
+    grid-template-columns: 1fr 64px 1fr;
+    gap: 0; align-items: start;
+  }
+  .char__vs { padding-top: 56px; }
+
+  /* 3-col grids */
+  .ev-grid { grid-template-columns: repeat(3, 1fr); }
+  .vd-grid { grid-template-columns: repeat(3, 1fr); }
+  .ed--wide .vd-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* bg-layout */
+  .bg-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 52px; align-items: start;
+  }
+
+
+  .site-footer { padding: 44px 56px; }
+}
+
+/* ── 1200px ── */
+@media (min-width: 1200px) {
+  .s       { padding: 100px 72px; }
+  .verdict { padding: 120px 72px; }
+  .nav         { padding: 22px 72px; }
+  .nav.stuck   { padding: 13px 72px; }
+  .hero    { padding-left: 72px; padding-right: 72px; }
+  .hero__tape  { padding: 10px 72px; }
+  .site-footer { padding: 48px 72px; }
+}
+
+/* ── 1440px —— 宽屏 PC ── */
+@media (min-width: 1440px) {
+
+  /* padding */
+  .s         { padding: 110px 96px; }
+  .verdict   { padding: 130px 96px; }
+  .nav       { padding: 24px 96px; }
+  .nav.stuck { padding: 14px 96px; }
+  .hero      { padding-left: 96px; padding-right: 96px; }
+  .hero__tape      { padding: 10px 96px; }
+  .site-footer     { padding: 56px 96px; }
+
+  /* ── Hero 2-col 布局 ── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto; /* 全部 auto，无 1fr 撑空 */
+    column-gap: 72px;
+    min-height: unset;          /* PC 不需要强制 100svh 撑底 */
+    padding-top: 120px;         /* nav 高度 + 视觉呼吸 */
+    align-content: start;       /* 从顶部往下自然排 */
+    justify-content: normal;
+  }
+
+  /* 左列：从上往下紧密堆叠 */
+  .hero__eye         { grid-column: 1; grid-row: 1; }
+  .hero__badges      { grid-column: 1; grid-row: 2; }
+  .hero__title-block { grid-column: 1; grid-row: 3; }
+  .hero__desc        {
+    grid-column: 1; grid-row: 4;
+    max-width: none;
+    margin-bottom: 0;
+    align-self: auto;
+  }
+
+  /* 右列：stats 占 row1-4，banner 在 row5，共同构成右侧数据区 */
+  .hero__stats {
+    grid-column: 2; grid-row: 1 / 5;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: flex-end;
+  }
+  .stat {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-right: none;
+    border-bottom: 1px solid var(--c-line);
+    padding: 16px 20px;
+  }
+  .stat:last-child { border-bottom: none; }
+  .stat__n { font-size: calc(20px * var(--fs-mul)); margin-bottom: 0; }
+  .stat__l { text-align: right; }
+
+  /* banner(右) + tape(左) 并排在 row5，消掉左列空行 */
+  .hero__banner { grid-column: 2; grid-row: 5; }
+  .hero__tape   {
+    grid-column: 1; grid-row: 5;
+    align-self: end;
+    padding-left: 0; padding-right: 0; /* 格子内不需要额外内边距 */
+  }
+
+  /* ── 时间线：2 列，撑满宽度 ── */
+  .tl {
+    max-width: none;
+    column-count: 2;
+    column-gap: 56px;
+  }
+  .tl__track { display: none; }
+  .tl__item  { break-inside: avoid; }
+
+  /* ── 后续区：2 列 ── */
+  .aft {
+    max-width: none;
+    column-count: 2;
+    column-gap: 56px;
+  }
+  .aft__item { break-inside: avoid; }
+
+  /* ── ev-grid 4 列 ── */
+  .ev-grid { grid-template-columns: repeat(4, 1fr); }
+
+  /* ── 宽卡内 vd-grid 4 列 ── */
+  .ed--wide .vd-grid { grid-template-columns: repeat(4, 1fr); }
+
+  /* ── bg-layout 加宽侧边栏 ── */
+  .bg-layout { grid-template-columns: 1fr 420px; gap: 72px; }
+
+  /* ── ref-list 加宽 ── */
+  .ref-list { max-width: 900px; }
+}
+
+/* ── 1920px —— 超宽屏 / 2K ── */
+@media (min-width: 1920px) {
+  .s         { padding: 120px clamp(96px, 8vw, 200px); }
+  .verdict   { padding: 140px clamp(96px, 8vw, 200px); }
+  .nav       { padding: 26px  clamp(96px, 8vw, 200px); }
+  .nav.stuck { padding: 15px  clamp(96px, 8vw, 200px); }
+  .hero      { padding-left:  clamp(96px, 8vw, 200px);
+               padding-right: clamp(96px, 8vw, 200px); }
+  .hero__tape  { padding: 10px clamp(96px, 8vw, 200px); }
+  .site-footer { padding: 64px clamp(96px, 8vw, 200px); }
+
+  /* 避免超宽正文行过长 */
+  .hero__desc { max-width: 600px; }
+  .tl__body   { max-width: 520px; }
+  .bg-layout  { grid-template-columns: 1fr 480px; }
+  .ref-list   { max-width: 1100px; }
+}
+
+/* ══════════════════════════════════════════════
+   LANDSCAPE PHONE  (orientation:landscape, width≤900)
+   目标：矮视口下所有 section 紧凑、横排布局
+══════════════════════════════════════════════ */
+@media (orientation: landscape) and (max-width: 900px) {
+
+  /* ── 通用 section padding ── */
+  .s, .verdict { padding: 40px 28px; }
+  .hero         { padding: 52px 28px 0; }
+  .hero__tape   { padding: 8px 28px; }
+  .site-footer  { padding: 24px 28px; }
+
+  /* ── section 标题间距 ── */
+  .s__title { margin-bottom: 20px; font-size: calc(clamp(22px, 4vw, 32px) * var(--fs-mul)); }
+
+  /* ── Hero：标题缩小 ── */
+  .hero__name,
+  .hero__event {
+    font-size: calc(clamp(32px, 8vw, 52px) * var(--fs-mul));
+    line-height: .88;
+  }
+  .hero__title-block { margin-bottom: 12px; }
+  .hero__eye         { margin-bottom: 10px; }
+  .hero__desc        { display: none; }
+
+  /* ── Hero stats：竖→横排 ── */
+  .hero__stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .stat {
+    flex: 1 1 auto;
+    min-width: 90px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: none;
+    border-right: 1px solid var(--c-line);
+    padding: 10px 14px;
+  }
+  .stat:last-child { border-right: none; }
+  .stat__n  { font-size: calc(16px * var(--fs-mul)); margin-bottom: 3px; }
+  .stat__l  { font-size: calc(9px  * var(--fs-mul)); text-align: left; }
+
+  /* ── Hero banner 2 列 ── */
+  .hero__banner { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── 字号切换器在极窄横屏时隐掉 ── */
+  .font-size-switcher { display: none; }
+
+  /* ── 当事人卡片横排（已有 900px 规则做 grid，这里覆盖为更紧凑） ── */
+  .char-wrap {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    gap: 0;
+    align-items: start;
+  }
+  .char { padding: 18px 16px; }
+  .char__vs { padding-top: 32px; font-size: 18px; }
+  .char__av { width: 52px; height: 52px; margin: 0 auto 12px; }
+  .char__name { font-size: calc(16px * var(--fs-mul)); }
+  .char__data li { padding: 5px 0; font-size: calc(11px * var(--fs-mul)); }
+
+  /* ── 时间线 2 列 ── */
+  .tl {
+    max-width: 100%;
+    padding-left: 0;
+    column-count: 2;
+    column-gap: 28px;
+  }
+  .tl__track { display: none; }
+  .tl__item  { break-inside: avoid; margin-bottom: 24px; }
+  .tl__node  { display: none; }
+
+  /* ── grid 卡片压缩 ── */
+  .ev-grid,
+  .law-grid,
+  .ed-grid,
+  .vd-grid { gap: calc(var(--gap) * .6); }
+
+  .ev, .law, .ed { padding: 18px 16px; }
+}
+
+/* ── 极矮横屏（高度 ≤ 420px）追加：进一步收紧 ── */
+@media (max-height: 420px) and (orientation: landscape) {
+  .hero { padding-top: 44px; min-height: unset !important; }
+  .hero__name,
+  .hero__event { font-size: calc(clamp(26px, 7vw, 42px) * var(--fs-mul)); }
+  .s, .verdict { padding: 28px 20px; }
+  .hero { padding-left: 20px; padding-right: 20px; }
+  .hero__tape  { padding: 6px 20px; }
+
+  /* banner 隐掉，节省空间 */
+  .hero__banner { display: none; }
+
+  /* stat 更紧 */
+  .stat { padding: 8px 10px; }
+  .stat__n { font-size: calc(14px * var(--fs-mul)); }
+}
