@@ -2,7 +2,7 @@
 Vtuber archive #1: The consumer who tipped Uchuu Neo (a.k.a. 雨中Neo) the most was banned, sparking a conflict between the administrator and the members.  
 This document is written in Simplified Chinese, mainly for Simplified Chinese readers.
 
-一场因雨中 Neo 舰长群管理带头引发的冲突事件。近 20000 元的总督打赏，因 1 分钟内被群管理禁言，付诸东流。
+一场因雨中 Neo 舰长群管理带头引发的冲突事件。近 20000 元的总督打赏，因 1 分钟内被群管理禁言，变得一文不值。
 
 # 前言 | Before you know
 为便于诸位了解此事件的大体情况，本人参考多方资料，记载此事件。然而内容复杂度远超预期，不便在此逐一写出，遂以网页方式呈现正文。详情可通过[此处进入 ↗](https://stridenotstrike.github.io/UchuuNeo-event-archive/)。
