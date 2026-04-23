@@ -1,3 +1,8 @@
+> [!NOTE]
+> 由于此文章内容争议过大，内容复杂，故经过多方面考虑，将对此文章进行归档与永久停止更新处理。请谅解。  
+> Due to the controversy and complexity of the content of this article, this article will be archived and permanently stopped from being updated. We're sorry for that.
+
+
 # UchuuNeo-event-archive
 Vtuber archive #1: The consumer who tipped Uchuu Neo (a.k.a. 雨中Neo) the most was banned, sparking a conflict between the administrator and the members.  
 This document is written in Simplified Chinese, mainly for Simplified Chinese readers.
