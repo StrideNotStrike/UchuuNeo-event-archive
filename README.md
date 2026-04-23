@@ -1,11 +1,12 @@
 # UchuuNeo-event-archive
-Vtuber archive #1: The consumer who tipped Uchuu Neo the most was banned, sparking a conflict between the administrator and the members.  
+Vtuber archive #1: The consumer who tipped Uchuu Neo (a.k.a. 雨中Neo) the most was banned, sparking a conflict between the administrator and the members.  
 This document is written in Simplified Chinese, mainly for Simplified Chinese readers.
 
-一场因群管理带头引发的冲突事件。近 20000 元的总督打赏，因 1 分钟内被群管理禁言，付诸东流。
+一场因雨中 Neo 舰长群管理带头引发的冲突事件。近 20000 元的总督打赏，因 1 分钟内被群管理禁言，付诸东流。
 
 # 前言 | Before you know
-为便于诸位了解此事件的大体情况，本人参考多方资料，记载此事件。然而内容复杂度远超预期，不便在此逐一写出，遂以网页方式呈现正文。详情可通过[此处进入 ↗](https://stridenotstrike.github.io/UchuuNeo-event-archive/)。  
+为便于诸位了解此事件的大体情况，本人参考多方资料，记载此事件。然而内容复杂度远超预期，不便在此逐一写出，遂以网页方式呈现正文。详情可通过[此处进入 ↗](https://stridenotstrike.github.io/UchuuNeo-event-archive/)。
+
 关于此事件的相关图片可前往[「雨中 Neo 总督禁言事件」相册](https://stridenotstrike.netlify.app/gallery/uchuu-neo-event/)查看。
 
 # 免责声明 | Disclaimer
@@ -16,4 +17,3 @@ This document is written in Simplified Chinese, mainly for Simplified Chinese re
 # 致谢 | Acknowledgement
 - 感谢 [清雨tpor.wtf](https://xn--tpor-kp8i193r.wtf/) 作者对网站的开源；
 - 感谢各界网友为此事件提供相关图片、证据等。
-![Uploading image.png…]()
