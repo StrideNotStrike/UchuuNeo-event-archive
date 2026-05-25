@@ -1,0 +1,9 @@
+.archive-banner {
+    background-color: #721c24; /* 极浅的灰色背景 */
+    color: #FFFFFF;            /* 深灰色文字 */
+    text-align: center;        /* 文本水平居中 */
+    padding: 8px 0;            /* 上下内边距 */
+    font-size: 14px;           /* 字体大小 */
+    font-family: var(--f-mono);
+    letter-spacing: 0.5px;     /* 字间距 */
+}
