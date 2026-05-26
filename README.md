@@ -14,7 +14,7 @@ Vtuber archive #1: The consumer who tipped Uchuu Neo (a.k.a. 雨中Neo) the most
 一场因雨中 Neo 舰长群管理带头引发的冲突事件。近 20000 元的总督打赏，因 1 分钟内被群管理禁言，变得一文不值。
 
 # 前言 | Before you know
-为便于诸位了解此事件的大体情况，本人参考多方资料，记载此事件。然而内容复杂度远超预期，不便在此逐一写出，遂以网页方式呈现正文。详情可通过[此处进入 ↗](https://stridenotstrike.github.io/UchuuNeo-event-archive/)。
+[《雨中 Neo 舰群禁言总督事件》](https://stridenotstrike.github.io/UchuuNeo-event-archive/)记述性专栏目前已进入整改状态，自 5 月 28 日起进行归档处理，网站内容也在此刻进行下架处理。网站内容下架后将进入较长一段时间的静默期，以便进行严谨修改。未来一日大体内容修改并通过审核后，专栏网站将重新上线。相关公告内容见[此处 ↗](https://stridenotstrike.netlify.app/posts/2026-05-26/)。
 
 关于此事件的相关图片可前往[「雨中 Neo 总督禁言事件」相册](https://stridenotstrike.netlify.app/gallery/uchuu-neo-event/)查看。
 
@@ -26,3 +26,4 @@ Vtuber archive #1: The consumer who tipped Uchuu Neo (a.k.a. 雨中Neo) the most
 # 致谢 | Acknowledgement
 - 感谢 [清雨tpor.wtf](https://xn--tpor-kp8i193r.wtf/) 作者对网站的开源；
 - 感谢各界网友为此事件提供相关图片、证据等。
+- 感谢各位引用过此专栏及其相关网站的编者、读者。
